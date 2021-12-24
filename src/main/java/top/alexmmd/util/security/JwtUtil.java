@@ -78,14 +78,5 @@ public class JwtUtil {
             return false;
         }
     }
-
-    public static void main(String[] args) {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.putOpt("uid", 1);
-        jsonObject.putOpt("role", ListUtil.of("ADMIN", "USER"));
-        String token = JwtUtil.generateToken(jsonObject);
-        System.out.println("token = " + token);
-        boolean b = JwtUtil.verifierToken(token);
-        System.out.println("b = " + b);
-    }
+    
 }
